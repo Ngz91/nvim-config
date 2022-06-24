@@ -128,6 +128,11 @@ local mappings = {
     },
   },
 
+  d={
+    name="Docker",
+    d={"<cmd>lua _LAZYDOCKER_TOGGLE()<CR>", "Lazydocker"},
+  },
+
   l = {
     name = "LSP",
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
