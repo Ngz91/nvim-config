@@ -59,6 +59,11 @@ return packer.startup(function(use)
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
 
+  use {
+    "SmiteshP/nvim-gps",
+    requires = "nvim-treesitter/nvim-treesitter"
+  }
+
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
@@ -92,7 +97,7 @@ return packer.startup(function(use)
   -- Treesitter
   use {
     "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate",
+    --run = ":TSUpdate",
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
   use "windwp/nvim-ts-autotag"
