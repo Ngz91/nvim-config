@@ -129,9 +129,9 @@ local mappings = {
     },
   },
 
-  d={
-    name="Docker",
-    d={"<cmd>lua _LAZYDOCKER_TOGGLE()<CR>", "Lazydocker"},
+  d = {
+    name = "Docker",
+    d = { "<cmd>lua _LAZYDOCKER_TOGGLE()<CR>", "Lazydocker" },
   },
 
   l = {
@@ -177,6 +177,14 @@ local mappings = {
     R = { "<cmd>Telescope registers<cr>", "Registers" },
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
+  },
+  n = {
+    name = "Neotest",
+    a = { "<cmd>lua require('neotest').run.attach()<cr>", "Attach" },
+    r = { "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<cr>", "Run current file" },
+    d = { "<cmd>lua require('neotest').run.run()<cr>", "Run nearest test" },
+    o = { "<cmd>lua require('neotest').output.open<cr>", "Show error output" },
+    s = { "<cmd>lua require('neotest').summary.toggle()<cr>", "Toggle test summary" },
   },
   t = {
     name = "Terminal",
