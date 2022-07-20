@@ -77,8 +77,8 @@ bufferline.setup {
       guibg = { attribute = "bg", highlight = "Normal" },
     },
     background = {
-      guifg = { attribute = "fg", highlight = "TabLine" },
-      guibg = { attribute = "bg", highlight = "TabLine" },
+      guifg = { attribute = "fg", highlight = "Normal" },
+      guibg = { attribute = "bg", highlight = "Normal" },
     },
 
     -- buffer_selected = {
@@ -87,17 +87,17 @@ bufferline.setup {
     --   gui = 'none'
     --   },
     buffer_visible = {
-      guifg = { attribute = "fg", highlight = "TabLine" },
-      guibg = { attribute = "bg", highlight = "TabLine" },
+      guifg = { attribute = "fg", highlight = "Normal" },
+      guibg = { attribute = "bg", highlight = "Normal" },
     },
 
     close_button = {
-      guifg = { attribute = "fg", highlight = "TabLine" },
-      guibg = { attribute = "bg", highlight = "TabLine" },
+      guifg = { attribute = "fg", highlight = "Normal" },
+      guibg = { attribute = "bg", highlight = "Normal" },
     },
     close_button_visible = {
-      guifg = { attribute = "fg", highlight = "TabLine" },
-      guibg = { attribute = "bg", highlight = "TabLine" },
+      guifg = { attribute = "fg", highlight = "Normal" },
+      guibg = { attribute = "bg", highlight = "Normal" },
     },
     -- close_button_selected = {
     --   guifg = {attribute='fg',highlight='TabLineSel'},
@@ -109,8 +109,8 @@ bufferline.setup {
       guibg = { attribute = "bg", highlight = "Normal" },
     },
     tab = {
-      guifg = { attribute = "fg", highlight = "TabLine" },
-      guibg = { attribute = "bg", highlight = "TabLine" },
+      guifg = { attribute = "fg", highlight = "Normal" },
+      guibg = { attribute = "bg", highlight = "Normal" },
     },
     tab_close = {
       -- guifg = {attribute='fg',highlight='LspDiagnosticsDefaultError'},
@@ -148,8 +148,8 @@ bufferline.setup {
     },
 
     separator = {
-      guifg = { attribute = "bg", highlight = "TabLine" },
-      guibg = { attribute = "bg", highlight = "TabLine" },
+      guifg = { attribute = "bg", highlight = "Normal" },
+      guibg = { attribute = "bg", highlight = "Normal" },
     },
     separator_selected = {
       guifg = { attribute = "bg", highlight = "Normal" },
