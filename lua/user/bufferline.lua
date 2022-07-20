@@ -14,10 +14,10 @@ bufferline.setup {
     -- and so changing this is NOT recommended, this is intended
     -- as an escape hatch for people who cannot bear it for whatever reason
     indicator_icon = "▎",
-    buffer_close_icon = "",
+    buffer_close_icon = "",
     -- buffer_close_icon = '',
     modified_icon = "●",
-    close_icon = "",
+    close_icon = "",
     -- close_icon = '',
     left_trunc_marker = "",
     right_trunc_marker = "",
@@ -74,7 +74,7 @@ bufferline.setup {
   highlights = {
     fill = {
       guifg = { attribute = "fg", highlight = "#ff0000" },
-      guibg = { attribute = "bg", highlight = "TabLine" },
+      guibg = { attribute = "bg", highlight = "Normal" },
     },
     background = {
       guifg = { attribute = "fg", highlight = "TabLine" },
