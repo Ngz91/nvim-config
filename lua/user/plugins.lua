@@ -104,6 +104,19 @@ return packer.startup(function(use)
   use "JoosepAlviste/nvim-ts-context-commentstring"
   use "windwp/nvim-ts-autotag"
 
+  --Testing
+  use "nvim-neotest/neotest-python"
+  use "nvim-neotest/neotest-plenary"
+  use "nvim-neotest/neotest-vim-test"
+  use {
+    "nvim-neotest/neotest",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "antoinemadec/FixCursorHold.nvim"
+    }
+  }
+
   -- Git
   use "lewis6991/gitsigns.nvim"
 
