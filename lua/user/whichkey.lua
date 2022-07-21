@@ -178,9 +178,10 @@ local mappings = {
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
   },
-  T = {
+  n = {
     name = "Pytest",
-    t = {"<cmd>lua _PYTEST_TOGGLE()<cr>", "Run pytest on file"}
+    t = {"<cmd>lua _PYTEST_TOGGLE()<cr>", "Run pytest on file"},
+    c = {"<cmd>lua _PYTEST_CLOSE()<cr>", "Close pytest terminal"},
   },
   t = {
     name = "Terminal",

@@ -51,10 +51,14 @@ function _LAZYDOCKER_TOGGLE()
   lazydocker:toggle()
 end
 
-local pytest = Terminal:new({ cmd = "pytest", hidden = true })
+local pytest = Terminal:new({ cmd = "pytest", hidden = true, close_on_exit=false })
 
 function _PYTEST_TOGGLE()
   pytest:toggle()
+end
+
+function _PYTEST_CLOSE()
+  pytest:close()
 end
 
 local node = Terminal:new({ cmd = "node", hidden = true })
