@@ -180,8 +180,13 @@ local mappings = {
   },
   n = {
     name = "Pytest",
-    t = {"<cmd>lua _PYTEST_TOGGLE()<cr>", "Run pytest on file"},
-    c = {"<cmd>lua _PYTEST_CLOSE()<cr>", "Close pytest terminal"},
+    --a = { "<cmd>lua require('neotest').run.attach()<cr>", "Attach" },
+    --r = { "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<cr>", "Run current file" },
+    --d = { "<cmd>lua require('neotest').run.run()<cr>", "Run nearest test" },
+    --o = { "<cmd>lua require('neotest').output.open()<cr>", "Show error output" },
+    --s = { "<cmd>lua require('neotest').summary.open()<cr>", "Toggle test summary" },
+    t = { "<cmd>lua _PYTEST_TOGGLE()<cr>", "Run pytest on file" },
+    c = { "<cmd>lua _PYTEST_CLOSE()<cr>", "Close pytest terminal" },
   },
   t = {
     name = "Terminal",
