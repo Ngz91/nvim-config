@@ -51,6 +51,13 @@ function _LAZYDOCKER_TOGGLE()
   lazydocker:toggle()
 end
 
+function _DJANGO_STARTPROJECT()
+  local project_name = vim.fn.input("Project Name: ")
+  local formated_project = string.format("django-admin startproject %s", project_name)
+  local django_startproject = Terminal:new({ cmd = formated_project, hidden = true })
+  django_startproject:toggle()
+end
+
 local pytest = Terminal:new({ cmd = "pytest", hidden = true, close_on_exit=false })
 
 function _PYTEST_TOGGLE()

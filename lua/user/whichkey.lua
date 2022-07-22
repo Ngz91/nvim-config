@@ -128,6 +128,10 @@ local mappings = {
       "Diff",
     },
   },
+  D = {
+    name = "Django",
+    s = { "<cmd>lua _DJANGO_STARTPROJECT()<CR>", "Start project" },
+  },
 
   d = {
     name = "Docker",
