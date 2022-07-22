@@ -59,20 +59,11 @@ function _DJANGO_STARTPROJECT()
 end
 
 function _TOGGLE_SELECTION()
-  local current_directory = io.popen("dir")
-  if current_directory then
-    print(current_directory:read("*a"))
-  end
-  print(getmetatable(current_directory))
-  --vim.ui.select(getmetatable(current_directory), { prompt = 'select' }, function (choice)
+  local current_dir = vim.loop.cwd()
+  print(current_dir)
+  --vim.ui.select({current_dir}, { prompt = 'select' }, function (choice)
   --  print(choice)
   --end)
-end
-
-function _RUNTIMEPATHS()
-  for idx, value in pairs(vim.api.nvim_list_runtime_paths()) do
-    print(idx .. ' ' .. value)
-  end
 end
 
 local pytest = Terminal:new({ cmd = "pytest", hidden = true, close_on_exit = false })
