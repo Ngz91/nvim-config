@@ -131,6 +131,8 @@ local mappings = {
   D = {
     name = "Django",
     s = { "<cmd>lua _DJANGO_STARTPROJECT()<CR>", "Start project" },
+    y = { "<cmd>lua _TOGGLE_SELECTION()<cr>", "Test selection" },
+    r = { "<cmd>lua _RUNTIMEPATHS()<cr>", "Runtime paths" },
   },
 
   d = {
