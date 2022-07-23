@@ -131,7 +131,10 @@ local mappings = {
   D = {
     name = "Django",
     s = { "<cmd>lua _DJANGO_STARTPROJECT()<CR>", "Start project" },
-    y = { "<cmd>lua _TOGGLE_SELECTION()<cr>", "Test selection" },
+    y = { "<cmd>lua _DJANGO_CREATEAPP()<cr>", "Create App" },
+    d = { "<cmd>lua _DJANGO_DB_SHELL()<cr>", "DB Shell" },
+    t = { "<cmd>lua _DJANGO_SHELL()<cr>", "Django Shell" },
+    F = { "<cmd>lua _DJANGO_FLUSH()<cr>", "Flush DB" },
   },
 
   d = {
