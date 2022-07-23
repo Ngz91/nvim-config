@@ -60,16 +60,15 @@ end
 
 function _DJANGO_CREATEAPP()
   local app_name = vim.fn.input("App Name: ")
-  local directory = vim.fn.input("Directory where the app will reside: ")
-  local command_app = app_name .. " " .. directory
-  local django_createapp = Terminal:new({ cmd = string.format("django-admin createapp %s", command_app), hidden = true })
+  local django_createapp = Terminal:new({ cmd = string.format("cd * && python manage.py createapp %s", app_name), hidden = true })
   django_createapp:toggle()
 end
 
-local django_shell = Terminal:new({ cmd = "django-admin shell", hidden = true })
-local django_db_shell = Terminal:new({ cmd = "django-admin dbshell", hidden = true })
-local django_makemigrations = Terminal:new({ cmd = "django-admin makemigrations", hidden=true })
-local django_migrate = Terminal:new({ cmd = "django-admin migrate", hidden=true })
+local django_shell = Terminal:new({ cmd = "cd * && python manage.py shell", hidden = true, direction = "vertical" })
+local django_db_shell = Terminal:new({ cmd = "cd * && python manage.py dbshell", hidden = true, direction = "vertical" })
+local django_makemigrations = Terminal:new({ cmd = "cd * && python manage.py makemigrations", hidden = true })
+local django_migrate = Terminal:new({ cmd = "cd * && python manage.py migrate", hidden = true })
+local django_flush = Terminal:new({ cmd = string.format("cd * && python manage.py flush"), hidden = true })
 
 function _DJANGO_MAKEMIGRATIONS()
   django_makemigrations:toggle()
@@ -88,8 +87,6 @@ function _DJANGO_DB_SHELL()
 end
 
 function _DJANGO_FLUSH()
-  local flush_database = vim.fn.input("Database to flush: ")
-  local django_flush = Terminal:new({ cmd = string.format("django-admin %s", flush_database), hidden = true })
   django_flush:toggle()
 end
 
