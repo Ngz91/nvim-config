@@ -33,7 +33,7 @@ local function footer()
   -- local fortune = handle:read("*a")
   -- handle:close()
   -- return fortune
-  return "ngzportfolio.herokuapp.com"
+  return "🚀 ngzportfolio.vercel.app"
 end
 
 dashboard.section.footer.val = footer()

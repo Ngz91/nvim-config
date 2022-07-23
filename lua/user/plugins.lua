@@ -49,7 +49,7 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-web-devicons"
   use "kyazdani42/nvim-tree.lua"
   use "romgrk/barbar.nvim"
-  --use "akinsho/bufferline.nvim"
+  --use "akinsho/bufferline.nvim" -- Removed to test barbar
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
   use "akinsho/toggleterm.nvim"
@@ -104,19 +104,6 @@ return packer.startup(function(use)
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
   use "windwp/nvim-ts-autotag"
-
-  --Testing
-  use "nvim-neotest/neotest-python"
-  use "nvim-neotest/neotest-plenary"
-  use "nvim-neotest/neotest-vim-test"
-  use {
-    "nvim-neotest/neotest",
-    requires = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-      "antoinemadec/FixCursorHold.nvim"
-    }
-  }
 
   -- Git
   use "lewis6991/gitsigns.nvim"
