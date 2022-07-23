@@ -2,6 +2,7 @@ for opt, val in pairs({
   backspace = "indent,eol,start",
   breakindent = true,
   completeopt = "menuone,noselect,menu",
+  clipboard = "unnamed",
   conceallevel = 3,
   cursorlineopt = "number",
   diffopt = "internal,filler,closeoff,algorithm:patience",
