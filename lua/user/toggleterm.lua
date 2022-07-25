@@ -39,13 +39,13 @@ end
 vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 local Terminal = require("toggleterm.terminal").Terminal
-local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
+local lazygit = Terminal:new({ cmd = "lazygit", hidden = true, direction = "float" })
 
 function _LAZYGIT_TOGGLE()
   lazygit:toggle()
 end
 
-local lazydocker = Terminal:new({ cmd = "lazydocker", hidden = true })
+local lazydocker = Terminal:new({ cmd = "lazydocker", hidden = true, direction = "float" })
 
 function _LAZYDOCKER_TOGGLE()
   lazydocker:toggle()
@@ -68,7 +68,8 @@ local django_shell = Terminal:new({ cmd = "cd * && python manage.py shell", hidd
 local django_db_shell = Terminal:new({ cmd = "cd * && python manage.py dbshell", hidden = true, direction = "vertical" })
 local django_makemigrations = Terminal:new({ cmd = "cd * && python manage.py makemigrations", hidden = true })
 local django_migrate = Terminal:new({ cmd = "cd * && python manage.py migrate", hidden = true })
-local django_flush = Terminal:new({ cmd = string.format("cd * && python manage.py flush"), hidden = true })
+local django_flush = Terminal:new({ cmd = "cd * && python manage.py flush", hidden = true })
+local django_runserver = Terminal:new({ cmd = "cd * && python manage.py runserver", hidden = true, direction = "vertical" })
 
 function _DJANGO_MAKEMIGRATIONS()
   django_makemigrations:toggle()
@@ -88,6 +89,10 @@ end
 
 function _DJANGO_FLUSH()
   django_flush:toggle()
+end
+
+function _DJANGO_RUNSERVER()
+  django_runserver:toggle()
 end
 
 local pytest = Terminal:new({ cmd = "pytest", hidden = true, close_on_exit = false })
