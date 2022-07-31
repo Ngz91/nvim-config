@@ -11,10 +11,6 @@ lsp_installer.setup {
 	ensure_installed = servers
 }
 
-lspconfig.html.setup({
-  filetypes = {'html', 'htmldjango'},
-})
-
 for _, server in pairs(servers) do
 	local opts = {
 		on_attach = require("user.lsp.handlers").on_attach,
