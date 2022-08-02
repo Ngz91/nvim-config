@@ -4,7 +4,7 @@
 local lualine = require('lualine')
 
 local status_gps_ok, gps = pcall(require, "nvim-gps")
-if not status_gps_ok then 
+if not status_gps_ok then
   return
 end
 
@@ -18,8 +18,8 @@ local colors = {
   darkblue = '#081633',
   green    = '#98be65',
   orange   = '#FF8800',
-  violet   = '#a9a1e1',
-  magenta  = '#c678dd',
+  violet   = '#c118c4',
+  magenta  = '#ed15c2',
   blue     = '#51afef',
   red      = '#ec5f67',
 }
@@ -38,14 +38,14 @@ local conditions = {
   end,
 }
 
-local nvim_gps = function ()
-	local gps_location = gps.get_location()
-	if gps_location == "error" then
-	  return ""
-	else
-	  return gps.get_location()
-	end
+local nvim_gps = function()
+  local gps_location = gps.get_location()
+  if gps_location == "error" then
+    return ""
+  else
+    return gps.get_location()
   end
+end
 
 -- Config
 local config = {
@@ -135,20 +135,14 @@ ins_left {
 }
 
 ins_left {
-  -- filesize component
-  'filesize',
-  cond = conditions.buffer_not_empty,
-}
-
-ins_left {
   'filename',
   cond = conditions.buffer_not_empty,
   color = { fg = colors.magenta, gui = 'bold' },
 }
 
-ins_left { 'location' }
+ins_left { 'location', color = { fg = colors.red, gui = 'bold' } }
 
-ins_left { 'progress', color = { fg = colors.fg, gui = 'bold' } }
+ins_left { 'progress', color = { fg = colors.orange, gui = 'bold' } }
 
 ins_left {
   'diagnostics',
@@ -162,9 +156,10 @@ ins_left {
 }
 
 ins_left {
-	nvim_gps,
-	sources = {nvim_gps},
-	cond = conditions.hide_in_width,
+  nvim_gps,
+  sources = { nvim_gps },
+  cond = conditions.hide_in_width,
+  color = { fg = colors.blue },
 }
 
 -- Insert mid section. You can make any number of sections in neovim :)
@@ -193,7 +188,7 @@ ins_right {
     return msg
   end,
   icon = ' LSP:',
-  color = { fg = '#ffffff', gui = 'bold' },
+  color = { fg = '#11d93d', gui = 'bold' },
 }
 
 -- Add components to right sections
