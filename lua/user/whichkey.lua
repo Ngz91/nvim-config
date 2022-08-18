@@ -79,26 +79,28 @@ local opts = {
 }
 
 local mappings = {
-  ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
+  ["a"] = { "<cmd>Alpha<cr>", " Alpha" },
   ["b"] = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-    "Buffers",
+    "﬘ Buffers",
   },
-  ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-  ["w"] = { "<cmd>w!<CR>", "Save" },
-  ["q"] = { "<cmd>q!<CR>", "Quit" },
-  ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
-  ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
+  ["e"] = { "<cmd>NvimTreeToggle<cr>", " Explorer" },
+  ["w"] = { "<cmd>w!<CR>", " Save" },
+  ["q"] = { "<cmd>q!<CR>", " Quit" },
+  ["c"] = { "<cmd>Bdelete!<CR>", " Close Buffer" },
+  ["h"] = { "<cmd>nohlsearch<CR>", " No Highlight" },
   ["f"] = {
     "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-    "Find files",
+    " Find files",
   },
-  ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
-  ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
-  ["r"] = { "<cmd>:set number relativenumber!<cr>", "Relative numbers" },
+  ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", " Find Text" },
+  ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", " Projects" },
+  ["r"] = { "<cmd>:set number relativenumber!<cr>", " Relative numbers" },
+	["v"] = { "<cmd>vsplit<cr>", " Vsplit" },
+	["H"] = { "<cmd>split<cr>", " Hsplit" },
 
   p = {
-    name = "Packer",
+    name = " Packer",
     c = { "<cmd>PackerCompile<cr>", "Compile" },
     i = { "<cmd>PackerInstall<cr>", "Install" },
     s = { "<cmd>PackerSync<cr>", "Sync" },
@@ -107,7 +109,7 @@ local mappings = {
   },
 
   g = {
-    name = "Git",
+    name = " Git",
     g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
     j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
     k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
@@ -129,7 +131,7 @@ local mappings = {
     },
   },
   D = {
-    name = "Django",
+    name = "爵 Django",
     s = { "<cmd>lua _DJANGO_STARTPROJECT()<CR>", "Start project" },
     y = { "<cmd>lua _DJANGO_CREATEAPP()<cr>", "Create App" },
     r = { "<cmd>lua _DJANGO_RUNSERVER()<cr>", "Run django server" },
@@ -144,7 +146,7 @@ local mappings = {
   },
 
   l = {
-    name = "LSP",
+    name = " LSP",
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
     d = {
       "<cmd>Telescope lsp_document_diagnostics<cr>",
@@ -175,7 +177,7 @@ local mappings = {
     },
   },
   s = {
-    name = "Search",
+    name = " Search",
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
     h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
@@ -188,7 +190,7 @@ local mappings = {
     C = { "<cmd>Telescope commands<cr>", "Commands" },
   },
   n = {
-    name = "Pytest",
+    name = " Pytest",
     --a = { "<cmd>lua require('neotest').run.attach()<cr>", "Attach" },
     --r = { "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<cr>", "Run current file" },
     --d = { "<cmd>lua require('neotest').run.run()<cr>", "Run nearest test" },
@@ -198,7 +200,7 @@ local mappings = {
     c = { "<cmd>lua _PYTEST_CLOSE()<cr>", "Close pytest terminal" },
   },
   t = {
-    name = "Terminal",
+    name = " Terminal",
     n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
     u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
     t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },

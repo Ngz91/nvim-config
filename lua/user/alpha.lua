@@ -28,12 +28,10 @@ dashboard.section.buttons.val = {
 }
 
 local function footer()
-  -- NOTE: requires the fortune-mod package to work
-  -- local handle = io.popen("fortune")
-  -- local fortune = handle:read("*a")
-  -- handle:close()
-  -- return fortune
-  return "爵 ngzportfolio.vercel.app"
+    local version = vim.version()
+    local nvim_version_info = "   v" .. version.major .. "." .. version.minor .. "." .. version.patch
+
+    return " 爵 ngzportfolio.vercel.app".. nvim_version_info
 end
 
 dashboard.section.footer.val = footer()
