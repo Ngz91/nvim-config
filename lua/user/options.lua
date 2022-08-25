@@ -20,7 +20,7 @@ for opt, val in pairs({
   linebreak = true,
   mouse = "a",
   number = true,
-  pumheight = 15,
+  pumheight = 12,
   relativenumber = false,
   scrolloff = 10,
   shiftwidth = 0,
