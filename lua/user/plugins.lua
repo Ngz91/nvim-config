@@ -61,6 +61,19 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
   use "karb94/neoscroll.nvim"
   use "NvChad/nvim-colorizer.lua"
+  use {
+    "anuvyklack/windows.nvim",
+    requires = {
+      "anuvyklack/middleclass",
+      "anuvyklack/animation.nvim"
+    },
+    config = function()
+      vim.o.winwidth = 10
+      vim.o.winminwidth = 10
+      vim.o.equalalways = false
+      require('windows').setup({autowidth = {enable=true}})
+    end
+  }
 
   use {
     "SmiteshP/nvim-gps",
@@ -93,6 +106,13 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  use "RRethy/vim-illuminate" -- highlight other uses of the word under cursor
+  use({
+    "Maan2003/lsp_lines.nvim",
+    config = function()
+      require("lsp_lines").setup()
+    end,
+  })
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
