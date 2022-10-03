@@ -96,8 +96,8 @@ local mappings = {
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", " Find Text" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", " Projects" },
   ["r"] = { "<cmd>:set number relativenumber!<cr>", " Relative numbers" },
-	["v"] = { "<cmd>vsplit<cr>", " Vsplit" },
-	["H"] = { "<cmd>split<cr>", " Hsplit" },
+  ["v"] = { "<cmd>vsplit<cr>", " Vsplit" },
+  ["H"] = { "<cmd>split<cr>", " Hsplit" },
 
   p = {
     name = " Packer",
@@ -210,6 +210,11 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+  o = {
+    name = " Options",
+    c = { "<cmd>lua vim.g.cmp_active = not vim.g.cmp_active<cr>", "Completion on/off toggle" },
+    w = { "<cmd>:set wrap!<cr>", "Toggle wrap" },
+  }
 }
 
 which_key.setup(setup)

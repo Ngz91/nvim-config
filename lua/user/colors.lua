@@ -119,7 +119,7 @@ loadHighlights({
   PmenuSel = { Transparent, Grey3, "bold" },
   PMenuSbar = { Transparent },
   PMenuThumb = { Transparent, Grey4 },
-  Visual = { Transparent, Grey1, "bold,underline" },
+  Visual = { Transparent, Grey2, "bold,underline" },
   EndOfBuffer = { Grey1 },
   Underlined = { Transparent, "underline" },
   SpellBad = { Transparent, "undercurl" },
