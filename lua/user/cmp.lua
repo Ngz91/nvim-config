@@ -61,6 +61,7 @@ local kind_icons = {
 -- find more here: https://www.nerdfonts.com/cheat-sheet
 
 local compare = require("cmp.config.compare")
+local context = require("cmp.config.context")
 
 vim.g.cmp_active = true
 
@@ -68,6 +69,9 @@ cmp.setup({
   enabled = function()
     local buftype = vim.api.nvim_buf_get_option(0, "buftype")
     if buftype == "prompt" then
+      return false
+    end
+    if context.in_treesitter_capture("comment") == true or context.in_syntax_group("Comment") then
       return false
     end
     return vim.g.cmp_active
